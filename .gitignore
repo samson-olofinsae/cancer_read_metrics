@@ -1,0 +1,25 @@
+# BAM and related files
+*.bam
+*.bai
+*.sam
+*.cram
+*.vcf
+*.tbi
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter and system artifacts
+.ipynb_checkpoints/
+.DS_Store
+
+# Results and logs
+*.log
+*.tsv
+*.csv
+*.tmp
+
+# Secrets
+.env
+
