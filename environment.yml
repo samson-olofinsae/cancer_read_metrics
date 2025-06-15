@@ -1,0 +1,13 @@
+name: cancer-metrics
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - samtools=1.16.1
+  - bcftools
+  - pandas
+  - matplotlib
+  - seaborn
+  - jupyterlab
