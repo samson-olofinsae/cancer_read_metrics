@@ -117,3 +117,12 @@ Feel free to reuse, cite, or adapt this project. Cite as:
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
+
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE) © 2025 Samson Olofinsae.  
+You are free to use, modify, and distribute this software with proper attribution.
+
