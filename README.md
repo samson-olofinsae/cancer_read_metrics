@@ -18,7 +18,7 @@ This project explores:
 
 - The divergence between `flagstat` and `idxstats` read counts  
 - Whether discrepancies affect clinical metrics like VAF detection  
-- Proposing a standardized approach or validation script  
+- Proposing a standardised approach or validation script  
 
 ---
 
@@ -71,7 +71,7 @@ bash scripts/compute_idxstats.sh input.bam > results/input_idxstats.txt
 python scripts/compare_metrics.py --flagstat results/input_flagstat.txt --idxstats results/input_idxstats.txt --out results/input_comparison.tsv
 ```
 
-### 3. Visualize Differences
+### 3. Visualise Differences
 
 Use the provided Jupyter notebook to explore discrepancies:
 ```bash
