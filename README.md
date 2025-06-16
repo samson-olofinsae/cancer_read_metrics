@@ -126,3 +126,18 @@ This project is licensed under the [MIT License](./LICENSE).
 This project is licensed under the [MIT License](./LICENSE) © 2025 Samson Olofinsae.  
 You are free to use, modify, and distribute this software with proper attribution.
 
+
+
+---
+
+## Training Context
+
+This project supports my Clinical Bioinformatics training by evaluating discrepancies between mapped read metrics (`flagstat` vs `idxstats`) in cancer BAM files.
+
+Its aims include:
+
+- Validating downsampling workflows for tumour/normal pair matching
+- Assessing impact on Variant Allele Frequency (VAF) thresholds
+- Laying groundwork for a reproducible, citable validation tool
+
+The work aligns with STP Equivalence Domains 1 (Clinical Care), 2 (Scientific Practice), and 4 (Research & Innovation).
