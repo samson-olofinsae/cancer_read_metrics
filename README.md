@@ -141,3 +141,20 @@ Its aims include:
 - Laying groundwork for a reproducible, citable validation tool
 
 The work aligns with STP Equivalence Domains 1 (Clinical Care), 2 (Scientific Practice), and 4 (Research & Innovation).
+
+## Environment & Reproducibility
+
+All analyses in this project were performed using a reproducible Conda environment defined in [`environment.yml`](./environment.yml). Key software tools were version-pinned to ensure consistency across runs and reproducibility of results.
+
+**Core dependencies include:**
+- `samtools v1.16.1` – for all BAM-level metric extraction (`flagstat`, `idxstats`)
+- `python v3.10` – for scripting and data processing
+- `pandas`, `matplotlib`, `seaborn` – for downstream analysis and visualization
+- `jupyterlab` – for interactive data exploration and reproducibility
+
+This environment reflects stable versions commonly used in clinical and cancer genomics workflows.
+
+To recreate the environment:
+```bash
+conda env create -f environment.yml
+conda activate cancer-metrics
