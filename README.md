@@ -35,23 +35,25 @@ cancer_read_metrics/
 │   ├── vaf_shift_plot.png
 │   └── flagstat_vs_idxstats.pdf
 ├── notebooks/
-│   └── analysis_summary.ipynb
+│   └── plot_vaf_metrics.ipynb
 ├── scripts/
 │   ├── compute_flagstat.sh
 │   ├── compute_idxstats.sh
 │   └── compare_metrics.py
-└── results/
-    └── metrics_comparison.tsv
+├── results/
+│   └── metrics_comparison.tsv
+└── tests/
+    └── example.sam
 ```
 
 ---
 
 ## Tools and Dependencies
 
-- `samtools` (v1.10 or above)
-- `python` (3.8+)
+- `samtools` (v1.22 or above)
+- `python` (3.10+)
 - `pandas`, `matplotlib`, `seaborn` (for analysis and plotting)
-- `jupyter` (for notebook-based exploration)
+- `jupyterlab` (for notebook-based exploration)
 
 ---
 
@@ -75,7 +77,7 @@ python scripts/compare_metrics.py --flagstat results/input_flagstat.txt --idxsta
 
 Use the provided Jupyter notebook to explore discrepancies:
 ```bash
-jupyter notebook notebooks/analysis_summary.ipynb
+jupyter notebook notebooks/plot_vaf_metrics.ipynb
 ```
 
 ---
@@ -106,6 +108,23 @@ Early data suggest `flagstat` often reports **slightly higher mapped reads** tha
 
 ---
 
+## Testing and Validation
+
+A minimal SAM file (`tests/example.sam`) is included for development and testing. It allows quick validation of `samtools` parsing tools (`flagstat`, `idxstats`) without requiring large BAM files.
+
+This file contains dummy reads aligned to chr1 and chr2:
+
+```
+@HDVN:1.0SO:unsorted
+@SQSN:chr1LN:248956422
+@SQSN:chr2LN:242193529
+read0010chr11006010M*00ACTGACTGAAIIIIIIIIII
+read0020chr21506010M*00TGACTGACTGIIIIIIIIII
+read0034*00**00NNNNNNNNNNIIIIIIIIII
+```
+
+---
+
 ## Citation and Reuse
 
 Feel free to reuse, cite, or adapt this project. Cite as:
@@ -116,17 +135,8 @@ Feel free to reuse, cite, or adapt this project. Cite as:
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
-
-
----
-
-## License
-
 This project is licensed under the [MIT License](./LICENSE) © 2025 Samson Olofinsae.  
 You are free to use, modify, and distribute this software with proper attribution.
-
-
 
 ---
 
@@ -142,12 +152,14 @@ Its aims include:
 
 The work aligns with STP Equivalence Domains 1 (Clinical Care), 2 (Scientific Practice), and 4 (Research & Innovation).
 
+---
+
 ## Environment & Reproducibility
 
 All analyses in this project were performed using a reproducible Conda environment defined in [`environment.yml`](./environment.yml). Key software tools were version-pinned to ensure consistency across runs and reproducibility of results.
 
 **Core dependencies include:**
-- `samtools v1.16.1` – for all BAM-level metric extraction (`flagstat`, `idxstats`)
+- `samtools v1.22` – for all BAM-level metric extraction (`flagstat`, `idxstats`)
 - `python v3.10` – for scripting and data processing
 - `pandas`, `matplotlib`, `seaborn` – for downstream analysis and visualization
 - `jupyterlab` – for interactive data exploration and reproducibility
@@ -157,4 +169,5 @@ This environment reflects stable versions commonly used in clinical and cancer g
 To recreate the environment:
 ```bash
 conda env create -f environment.yml
-conda activate cancer-metrics
+conda activate cancer-metrics-env
+```
