@@ -1,0 +1,23 @@
+# This avoids copying unnecessary files into the Docker image
+
+# Python cache files and folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Large genomics data files that are not needed in image
+*.bam       # Binary Alignment Map
+*.bai       # BAM Index
+*.sam       # Sequence Alignment/Map
+*.vcf       # Variant Call Format
+*.log       # Log files
+*.tmp       # Temporary files
+
+# Jupyter and system files
+.ipynb_checkpoints/
+.DS_Store    # macOS system file
+
+# Secrets and environment configs
+.env         # Environment variable file (e.g., passwords, API keys)
+
