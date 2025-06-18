@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# extract_flagstat.sh
+# compute_flagstat.sh
 # --------------------
 # Extracts mapped read metrics from a BAM file using samtools flagstat.
 # Outputs a tab-separated summary line for appending to a master TSV file.

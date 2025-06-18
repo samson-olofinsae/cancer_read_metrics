@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# extract_idxstats.sh
+# compute_idxstats.sh
 # --------------------
 # Extracts mapped read count from a BAM file using samtools idxstats.
 # Outputs a tab-separated summary line for appending to a master TSV file.
