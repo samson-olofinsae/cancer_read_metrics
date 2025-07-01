@@ -1,3 +1,23 @@
+"""
+test_compare_metrics.py
+
+Unit test for compare_metrics.py, which compares mapped read counts between
+samtools flagstat and idxstats output files.
+
+Purpose:
+    This test ensures that the compare_metrics() function correctly:
+    - Matches samples between flagstat and idxstats TSV files
+    - Computes the absolute and percentage differences in mapped read counts
+    - Handles simple, valid inputs without error
+
+Usage:
+    Run the test with pytest:
+        pytest tests/test_compare_metrics.py
+
+Author:
+    Samson Olofinsae
+"""
+
 import os
 import sys
 import tempfile
