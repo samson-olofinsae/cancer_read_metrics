@@ -154,6 +154,9 @@ The work aligns with STP Equivalence Domains 1 (Clinical Care), 2 (Scientific Pr
 
 ---
 
+## Ethical Statement
+This project is intended strictly for educational and training purposes. It does not represent, replicate, or leak any internal pipeline, data, or intellectual property of the NHS, WMRGL, or affiliated institutions. All workflows and configurations are independently developed based on public documentation. No patient data was used. This project is released openly to promote transparency, validation, and reproducibility in clinical bioinformatics training.
+
 ## Environment & Reproducibility
 
 All analyses in this project were performed using a reproducible Conda environment defined in [`environment.yml`](./environment.yml). Key software tools were version-pinned to ensure consistency across runs and reproducibility of results.
