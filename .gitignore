@@ -1,4 +1,6 @@
-# Data files
+# -----------------------------
+# Data directories (large files)
+# -----------------------------
 data/raw_bams/
 data/downsampled/
 
@@ -10,24 +12,25 @@ figures/
 *.bam
 *.bai
 *.sam
+*.cram
+*.crai
 
-# Jupyter and system artifacts
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter artifacts
 .ipynb_checkpoints/
-.DS_Store
 
-# Results and logs
+# Logs and temporary files
 *.log
-*.tsv
-*.csv
 *.tmp
 
-# Secrets
+# Environment variables
 .env
-
-# Allow test/example.sam despite global .sam ignore
-!tests/example.sam
-
 
 # OS files
 .DS_Store
 
+# Allow test/example.sam despite global ignore
+!tests/example.sam
