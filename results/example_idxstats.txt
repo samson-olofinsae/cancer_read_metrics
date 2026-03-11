@@ -1,2 +1,0 @@
-Sample	Mapped_Reads_Idxstats
-example	2
